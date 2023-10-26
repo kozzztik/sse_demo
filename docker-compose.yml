@@ -1,0 +1,20 @@
+version: '3.5'
+services:
+  redis:
+    image: redis
+    restart: always
+    container_name: sse_redis
+  web:
+    build: ../sse_demo
+    restart: unless-stopped
+    links:
+      - redis:6379
+    logging:
+      driver: json-file
+      options:
+        max-size: "100m"
+        max-file: "10"
+    ports:
+      - 7000:7000
+    environment:
+      REDIS_HOST: sse_redis

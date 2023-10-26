@@ -1,0 +1,12 @@
+bind = ['0.0.0.0:7000']
+workers = 1
+worker_class = 'django_h2.worker.H2Worker'
+max_requests = 500
+keepalive = 60
+preload_app = True
+wsgi_app = "asgi:application"
+#accesslog = '-'
+disable_redirect_access_to_syslog = True
+#errorlog = '-'
+keyfile = "/opt/sse_demo/server_key.key"
+certfile = "/opt/sse_demo/server_key.crt"

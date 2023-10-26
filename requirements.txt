@@ -1,0 +1,6 @@
+django == 4.1.6
+gunicorn == 21.2.0
+redis == 4.5.4
+h2
+django_h2 @ git+https://github.com/kozzztik/django_h2.git@main
+
