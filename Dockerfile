@@ -16,7 +16,6 @@ ADD server_key.key /opt/sse_demo/server_key.key
 ADD asgi.py /opt/sse_demo/asgi.py
 
 ADD manage.py /opt/sse_demo/manage.py
-ADD worker.py /opt/sse_demo/worker.py
 
 ADD gunicorn.conf.py /opt/sse_demo/gunicorn.conf.py
 CMD [ "gunicorn" ]
